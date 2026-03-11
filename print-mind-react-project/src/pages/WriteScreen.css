@@ -1,0 +1,61 @@
+/* src/pages/WriteScreen.css */
+.write-screen-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timer-area {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.write-screen-container button { /* Estilo genérico para botões na tela de escrita */
+  background-color: #6c757d; /* Um cinza padrão */
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.write-screen-container button:hover {
+  background-color: #5a6268;
+}
+
+.writing-area {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  line-height: 1.5;
+  min-height: 300px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  resize: vertical; /* Permite redimensionar verticalmente */
+  background-color: #fff; /* Fundo branco para a área de escrita */
+  color: #333;
+}
+
+.submit-button {
+  background-color: #4A6FA5; /* Seu azul! */
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #3a5c8c; /* Um tom mais escuro no hover */
+}
