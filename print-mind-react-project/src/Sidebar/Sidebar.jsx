@@ -1,34 +1,41 @@
-import React from 'react';
+import { NavLink } from 'react-router-dom';
 import styles from './Sidebar.module.css';
+import logoFull from '../assets/logo_print_mind.png';
+
 
 export function Sidebar() {
   return (
     <aside className={styles.sidebar}>
-      <div className={styles.logoArea}>
-        {/* Aqui você pode colocar sua imagem de logo depois */}
-        <div className={styles.logoIcon}></div>
-        <h1 className={styles.logoText}>print-mind</h1>
+      <div className={styles.logoContainer}>
+        <img src={logoFull} alt="Logo" className={styles.logoImage} />
       </div>
 
-      <div className={styles.group}>
+      <nav className={styles.group}>
         <p className={styles.groupTitle}>Functions</p>
         <div className={styles.card}>
-          <div className={styles.item}><span className={styles.icon}>T</span> write</div>
-          <div className={styles.item}><span className={styles.icon}>💬</span> chat</div>
-          <div className={styles.item}><span className={styles.icon}>👁️</span> see</div>
-          <div className={styles.item}><span className={styles.icon}>📄</span> pages</div>
-          <div className={styles.item}><span className={styles.icon}>📅</span> calendar</div>
-        </div>
-      </div>
+          {/* NavLink muda a URL sem recarregar a página */}
+          <NavLink to="/" className={({ isActive }) => isActive ? styles.activeItem : styles.item}>
+            <span className={styles.icon}>T</span> write
+          </NavLink>
+          
+          <NavLink to="/chat" className={({ isActive }) => isActive ? styles.activeItem : styles.item}>
+            <span className={styles.icon}>💬</span> chat
+          </NavLink>
 
-      <div className={styles.group}>
-        <p className={styles.groupTitle}>Preferences</p>
-        <div className={styles.card}>
-          <div className={styles.item}><span className={styles.icon}>ℹ️</span> about us</div>
-          <div className={styles.item}><span className={styles.icon}>⚙️</span> settings</div>
-          <div className={styles.item}><span className={styles.icon}>Aあ</span> language</div>
+          <NavLink to="/see" className={({ isActive }) => isActive ? styles.activeItem : styles.item}>
+            <span className={styles.icon}>👁️</span> see
+          </NavLink>
+
+          <NavLink to="/pages" className={({ isActive }) => isActive ? styles.activeItem : styles.item}>
+            <span className={styles.icon}>📄</span> pages
+          </NavLink>
+          
+          <NavLink to="/calendar" className={({ isActive }) => isActive ? styles.activeItem : styles.item}>
+            <span className={styles.icon}>📅</span> calendar
+          </NavLink>
+
         </div>
-      </div>
+      </nav>
     </aside>
   );
 }

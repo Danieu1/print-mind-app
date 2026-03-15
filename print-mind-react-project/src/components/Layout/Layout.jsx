@@ -1,12 +1,8 @@
 import React from 'react';
+import { Sidebar } from '../../Sidebar/Sidebar';
+import { Header } from '../Header';
 import styles from './Layout.module.css';
-
-// 1. Header e MainContent estão SOLTOS em components, então subimos um nível e pegamos o arquivo direto
-import { Header } from '../Header.jsx'; 
-import { MainContent } from '../MainContent.jsx';
-
-// 2. Sidebar ainda parece estar DENTRO de uma pasta Sidebar, então entramos nela
-import { Sidebar } from '../../Sidebar/Sidebar.jsx';
+import { Outlet } from 'react-router-dom'; // 1. Importe o Outlet
 
 export function Layout() {
   return (
@@ -20,7 +16,8 @@ export function Layout() {
       </aside>
 
       <main className={styles.mainArea}>
-        <MainContent />
+        {/* 2. O Outlet é o espaço onde as páginas (Write, Chat, etc) vão aparecer */}
+        <Outlet /> 
       </main>
     </div>
   );

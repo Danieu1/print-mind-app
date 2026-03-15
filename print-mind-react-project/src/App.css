@@ -1,0 +1,20 @@
+:root {
+  /* Paleta de Cores do Print-Mind */
+  --bg-light: #F5F5F5;      /* O cinza de fundo da imagem */
+  --white: #FFFFFF;         /* Fundo dos cards e editor */
+  --primary-blue: #4A69BD;  /* O azul do botão Sign Up */
+  --text-main: #333333;     /* Texto escuro */
+  --text-muted: #888888;    /* Texto cinza (Functions/Preferences) */
+  --border-color: #DDDDDD;  /* Cor das bordas finas */
+  
+  /* Fontes */
+  --font-logo: 'Space Mono', monospace;
+  --font-main: 'Inter', sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  background-color: var(--bg-light);
+  color: var(--text-main);
+}
